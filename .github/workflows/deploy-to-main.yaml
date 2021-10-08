@@ -24,4 +24,4 @@ jobs:
       - name: Ls files
         run: ls
       - name: Deploy with rsync
-        run: rsync -avz * ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/staging-wordpress/wp-content/themes/astra
+        run: rsync -avz . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/staging-wordpress/wp-content/themes/astra
